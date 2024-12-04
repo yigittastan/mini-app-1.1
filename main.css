@@ -1,0 +1,389 @@
+/* Genel sayfa stili */
+body {
+    font-family: Arial, sans-serif;
+    /* Sayfa yazı tipini Arial ve sans-serif olarak ayarlar */
+    margin: 0;
+    /* Sayfa kenar boşluklarını sıfırlar */
+    padding: 0;
+    /* Sayfa içi boşlukları sıfırlar */
+    background-color: #f4f4f4;
+    /* Sayfanın arka plan rengini açık gri yapar */
+}
+
+/* Page Container düzeni */
+.page-container {
+    display: flex;
+    /* Flexbox düzeni kullanarak sayfayı yatayda ikiye böler */
+    height: 100vh;
+    /* Sayfanın yüksekliğini tam ekran yapar */
+}
+
+/* Page1: Ekranın %95'ini kaplar */
+.page1 {
+    width: 95%;
+    /* Sayfanın %95'lik kısmını kaplar */
+    height: 100%;
+    /* Sayfanın tam yüksekliğini kaplar */
+    overflow-y: auto;
+    /* İçerik taşarsa, dikeyde kaydırma çubuğu (scroll) ekler */
+    padding: 10px;
+    /* İçeriğin etrafında 10px boşluk bırakır */
+}
+
+/* Page2: Ekranın %5'ini kaplar, şu an boş */
+.page2 {
+    width: 5%;
+    /* Sayfanın %5'lik kısmını kaplar */
+    height: 80%;
+    /* Sayfanın %80'lik yüksekliğini kaplar */
+    background-color: #ddd;
+    /* Gri bir arka plan rengi ekler */
+}
+
+/* Wrapper içerik düzeni - Yatay düzenleme */
+.wrapper {
+    display: flex;
+    /* İçeriği yatay olarak düzenler */
+    justify-content: space-between;
+    /* İçerikleri sağa ve sola yaslar, aralarındaki boşluğu eşit yapar */
+    align-items: flex-start;
+    /* İçerikleri üstten hizalar */
+    flex-wrap: wrap;
+    /* Ekran küçüldüğünde içeriklerin alt satıra geçmesine izin verir */
+}
+
+/* Content her bir blok için stil */
+.content {
+    display: flex;
+    /* İçeriği esnek bir yapıda düzenler */
+    flex-direction: column;
+    /* Görsel ve inputları dikey olarak hizalar */
+    align-items: center;
+    /* İçeriği yatayda ortalar */
+    justify-content: center;
+    /* İçeriği dikeyde ortalar */
+    margin-bottom: 30px;
+    /* Her içerik bloğu arasına 30px boşluk bırakır */
+    background-color: white;
+    /* İçeriğin arka plan rengini beyaz yapar */
+    padding: 20px;
+    /* İçeriğe 20px iç boşluk ekler */
+    border-radius: 10px;
+    /* İçeriğin köşelerini yuvarlatır */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Hafif bir gölge ekler */
+    width: 30%;
+    /* İçeriğin genişliğini %30 olarak belirler */
+    min-width: 250px;
+    /* Minimum genişliği 250px yapar */
+    max-width: 400px;
+    /* Maksimum genişliği 400px yapar */
+    transition: transform 1s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Transform ve box-shadow için animasyon geçişleri ekler */
+}
+
+.add-content {
+    display: flex;
+    /* İçeriği esnek bir yapıda düzenler */
+    flex-direction: column;
+    /* Görsel ve inputları dikey olarak hizalar */
+    align-items: center;
+    /* İçeriği yatayda ortalar */
+    justify-content: center;
+    /* İçeriği dikeyde ortalar */
+    margin-bottom: 30px;
+    /* Her içerik bloğu arasına 30px boşluk bırakır */
+    background-color: white;
+    /* İçeriğin arka plan rengini beyaz yapar */
+    padding: 20px;
+    /* İçeriğe 20px iç boşluk ekler */
+    border-radius: 10px;
+    /* İçeriğin köşelerini yuvarlatır */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Hafif bir gölge ekler */
+    width: 30%;
+    /* İçeriğin genişliğini %30 olarak belirler */
+    min-width: 250px;
+    /* Minimum genişliği 250px yapar */
+    max-width: 400px;
+    /* Maksimum genişliği 400px yapar */
+    transition: transform 1s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Transform ve box-shadow için animasyon geçişleri ekler */
+}
+
+/* Görselin düzeni */
+.contentimg {
+    max-width: 100%;
+    /* Görselin genişliğini %100'e kadar büyütür */
+    height: auto;
+    /* Görselin yüksekliğini orantılı şekilde ayarlar */
+    margin-bottom: 15px;
+    /* Görsel ile input arasına 15px boşluk bırakır */
+}
+
+/* Input kutularının düzeni */
+input {
+    width: 90%;
+    /* Input genişliğini %90 yapar */
+    padding: 10px;
+    /* Input içerisine 10px boşluk ekler */
+    margin-bottom: 15px;
+    /* Input kutuları arasına 15px boşluk bırakır */
+    border: 1px solid #ccc;
+    /* Input kutularına gri renkte sınır çizer */
+    border-radius: 4px;
+    /* Input kutularının köşelerini yuvarlatır */
+    font-size: 16px;
+    /* Yazı boyutunu 16px yapar */
+}
+
+/* Input kutusuna odaklanıldığında stil değişir */
+input:focus {
+    outline: none;
+    /* Input kutusunun focus (odak) durumunda dış çerçeveyi kaldırır */
+    border-color: #007BFF;
+    /* Input kutusunun kenarlığını maviye çevirir */
+}
+
+/* Ayarlar butonunun düzeni */
+.settings {
+    text-align: center;
+    /* Butonları yatayda ortalar */
+    margin-top: 50px;
+    /* Butonun üst kısmında 50px boşluk bırakır */
+}
+
+/* Ayarlar butonunun stilini belirler */
+.settings-button {
+    padding: 10px 20px;
+    /* Butona 10px üst-alt, 20px sağ-sol iç boşluk ekler */
+    background-color: #007BFF;
+    /* Butonun arka plan rengini mavi yapar */
+    color: white;
+    /* Buton yazı rengini beyaz yapar */
+    font-size: 16px;
+    /* Yazı boyutunu 16px yapar */
+    border: none;
+    /* Butonun kenarlığını kaldırır */
+    border-radius: 5px;
+    /* Butonun köşelerini yuvarlatır */
+    cursor: pointer;
+    /* Butona fare ile tıklanabilir işaret ekler */
+    display: flex;
+    /* Buton içerisindeki öğeleri esnek yapar */
+    align-items: center;
+    /* Buton içerisindeki öğeleri yatayda ortalar */
+}
+
+/* Ayarlar butonunun ikonunu düzenler */
+.settings-button i {
+    margin-right: 10px;
+    /* Ikon ile metin arasına 10px boşluk bırakır */
+}
+
+/* Ayarlar butonunun hover (fare ile üzerine gelindiğinde) durumu */
+.settings-button:hover {
+    background-color: #0056b3;
+    /* Hover durumunda butonun rengini koyu mavi yapar */
+}
+
+/* Ayarlar butonunun aktif (tıklanmış) durumu */
+.settings-button:active {
+    background-color: #003366;
+    /* Tıklanmış durumda butonun rengini daha da koyulaştırır */
+}
+
+/* Submit butonunun düzeni */
+.submit-content {
+    padding: 10px 20px;
+    /* Butona 10px üst-alt, 20px sağ-sol iç boşluk ekler */
+    background-color: #28a745;
+    /* Butonun arka plan rengini yeşil yapar */
+    color: white;
+    /* Yazı rengini beyaz yapar */
+    font-size: 16px;
+    /* Yazı boyutunu 16px yapar */
+    border: none;
+    /* Butonun kenarlığını kaldırır */
+    border-radius: 5px;
+    /* Butonun köşelerini yuvarlatır */
+    cursor: pointer;
+    /* Butona tıklanabilir işaret ekler */
+    margin-top: 20px;
+    /* Üst tarafta 20px boşluk bırakır */
+    display: none;
+    /* Başlangıçta buton gizli */
+
+
+}
+
+/* Submit butonunun hover (fare ile üzerine gelindiğinde) durumu */
+.submit-content:hover {
+    background-color: #218838;
+    /* Hover durumunda buton rengini koyu yeşil yapar */
+}
+
+/* Submit butonunun aktif (tıklanmış) durumu */
+.submit-content:active {
+    background-color: #1e7e34;
+    /* Tıklanmış durumda butonun rengini daha koyu yeşil yapar */
+}
+
+/* Responsive Tasarım - Ekran boyutu 768px ve altı olan cihazlar için */
+@media (max-width: 768px) {
+    .wrapper {
+        justify-content: center;
+        /* Mobilde içerikleri merkeze yerleştirir */
+        margin-top: 20px;
+        /* Üst tarafta 20px boşluk bırakır */
+    }
+
+    .content {
+        width: 80%;
+        /* Mobilde içeriklerin genişliğini %80 yapar */
+    }
+
+    .settings-button {
+        font-size: 14px;
+        /* Ayarlar butonunun font boyutunu 14px yapar */
+    }
+}
+
+/* Shake ve move animasyonları */
+@keyframes shake {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    /* Başlangıç durumu */
+    25% {
+        transform: translateX(-10px) rotate(-5deg);
+    }
+
+    /* Sola hareket eder ve biraz döner */
+    50% {
+        transform: translateX(10px) rotate(5deg);
+    }
+
+    /* Sağa hareket eder ve döner */
+    75% {
+        transform: translateX(-5px) rotate(-2deg);
+    }
+
+    /* Sola hareket eder ve biraz döner */
+    100% {
+        transform: translateX(5px) rotate(2deg);
+    }
+
+    /* Sağa hareket eder ve döner */
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    /* Başlangıç durumu */
+    50% {
+        transform: translateX(100px);
+    }
+
+    /* Sağ tarafa 100px hareket eder */
+    100% {
+        transform: translateX(0);
+    }
+
+    /* Başlangıç noktasına geri döner */
+}
+
+/* Sallanma ve sağa sola hareket animasyonu ekle */
+.move-left-right {
+    animation: move 1s ease-in-out infinite, shake 4.5s ease-in-out infinite;
+    /* Sonsuz döngüde çalışacak şekilde güncellendi */
+}
+
+/* Button için özel stil */
+#move-button {
+    position: absolute;
+    /* Sayfa üzerinde konumu kesin olarak ayarlar */
+    top: 10px;
+    /* Üstten 10px uzaklık bırakır */
+    left: 10px;
+    /* Soldan 10px uzaklık bırakır */
+    background-color: #007bff;
+    /* Mavi renkli arka plan */
+    color: white;
+    /* Beyaz yazı rengi */
+    border: none;
+    /* Kenarlık yok */
+    padding: 5px 10px;
+    /* İçeriğe 5px üst-alt, 10px sağ-sol boşluk ekler */
+    cursor: pointer;
+    /* Butona tıklanabilir işaret ekler */
+    border-radius: 5px;
+    /* Butonun köşelerini yuvarlatır */
+}
+
+/* Tablo düzeni */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Resmin boyutlarını ayarlıyoruz */
+td img {
+    max-width: 50px;
+    height: auto;
+}
+
+.table-row {
+    background-color: #f0f0f0;
+}
+
+.name-cell {
+    font-weight: bold;
+}
+
+.img-cell img {
+    max-width: 100px;
+    height: auto;
+}
+/* Silme butonu stili */
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    display: none; /* Başlangıçta görünmez */
+    z-index: -1; /* Animasyon başlamadan önce alt tarafta olacak */
+}
+
+.delete-btn i {
+    font-size: 20px;
+}
+
+/* Content div'leri için z-index animasyonu */
+.content.animating {
+    z-index: 10; /* Animasyon başladığında üstte olacak */
+}
+
+/* Animation başladıktan sonra delete-btn görünür hale gelir */
+.move-left-right .delete-btn {
+    display: block;
+}
+
+/* Content içindeki delete button'ı da animasyon ile sağa sola kayacak şekilde hareket ettir */
+.move-left-right .delete-btn {
+    animation: shake 1s ease-in-out infinite;
+}

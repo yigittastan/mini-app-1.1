@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="page1">
+            <div class="wrapper">
+                <table>
+                    <td>
+                        <div class="content">
+                          <div class="delete-btn">
+                            <i class="bi bi-x"></i>
+                          </div>
+                          <img class="contentimg" src="images.png" alt="Image 1">
+                          <input type="text" class="name" placeholder="Lütfen İsim Giriniz.">
+                          <input type="text" class="url" placeholder="Lütfen Url Giriniz.">
+                        </div>
+                      </td>
+                      
+                    <td>
+                        <div class="content">
+                            <img class="contentimg" src="images.png" alt="Image 1">
+                            <input type="text" class="name" placeholder="Lütfen İsim Giriniz.">
+                            <input type="text" class="url" placeholder="Lütfen Url Giriniz.">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="content">
+                            <img class="contentimg" src="images.png" alt="Image 1">
+                            <input type="text" class="name" placeholder="Lütfen İsim Giriniz.">
+                            <input type="text" class="url" placeholder="Lütfen Url Giriniz.">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="add-content">
+                            <input type="text" id="name-content" placeholder="Lütfen İsim Giriniz.">
+                            <input type="text" id="url-content" placeholder="Lütfen Url Giriniz.">
+                            <input type="file" id="img-content" accept="image/*">
+                            <button id="add-save-content">Oluştur</button>
+                        </div>
+                    </td>
+                </table>
+            </div>
+        </div>
+
+        <div class="page2">
+            <div class="settings">
+                <a href="setting.html" target="blank">
+                    <button class="settings-button">
+                        Ayarlar
+                    </button>
+                </a>
+            </div>
+
+            <div class="edit-content">
+                <button class="edit-content">düzenle</button>
+            </div>
+
+            <div class="submit-content" style="display: none;">
+                <button class="submit-content">kaydet</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
