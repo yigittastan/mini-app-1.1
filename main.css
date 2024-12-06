@@ -213,8 +213,6 @@ input:focus {
     /* Üst tarafta 20px boşluk bırakır */
     display: none;
     /* Başlangıçta buton gizli */
-
-
 }
 
 /* Submit butonunun hover (fare ile üzerine gelindiğinde) durumu */
@@ -229,161 +227,80 @@ input:focus {
     /* Tıklanmış durumda butonun rengini daha koyu yeşil yapar */
 }
 
-/* Responsive Tasarım - Ekran boyutu 768px ve altı olan cihazlar için */
-@media (max-width: 768px) {
-    .wrapper {
-        justify-content: center;
-        /* Mobilde içerikleri merkeze yerleştirir */
-        margin-top: 20px;
-        /* Üst tarafta 20px boşluk bırakır */
-    }
-
-    .content {
-        width: 80%;
-        /* Mobilde içeriklerin genişliğini %80 yapar */
-    }
-
-    .settings-button {
-        font-size: 14px;
-        /* Ayarlar butonunun font boyutunu 14px yapar */
-    }
+/* Delete butonunun düzeni */
+.delete-btn {
+    position: absolute;
+    /* Konumu absolute yapar */
+    top: 5px;
+    /* Üstten 5px mesafe bırakır */
+    right: 5px;
+    /* Sağdan 5px mesafe bırakır */
+    width: 30px;
+    /* Buton genişliğini 30px yapar */
+    height: 30px;
+    /* Buton yüksekliğini 30px yapar */
+    border-radius: 50%;
+    /* Butonu yuvarlak yapar */
+    background-color: red;
+    /* Butonun arka plan rengini kırmızı yapar */
+    color: white;
+    /* Butonun yazı rengini beyaz yapar */
+    font-size: 20px;
+    /* Yazı boyutunu 20px yapar */
+    display: none;
+    /* Başlangıçta gizli */
+    justify-content: center;
+    /* İçeriği yatayda ortalar */
+    align-items: center;
+    /* İçeriği dikeyde ortalar */
 }
 
-/* Shake ve move animasyonları */
+/* Delete butonunun hover (fare ile üzerine gelindiğinde) durumu */
+.delete-btn:hover {
+    background-color: #c82333;
+    /* Hover durumunda buton rengini koyu kırmızı yapar */
+}
+
+/* Delete butonunun aktif (tıklanmış) durumu */
+.delete-btn:active {
+    background-color: #bd2130;
+    /* Tıklanmış durumda buton rengini daha koyu kırmızı yapar */
+}
+
+/* Hareket animasyonu */
 @keyframes shake {
     0% {
-        transform: translateX(0) rotate(0deg);
+        transform: translateX(0);
     }
-
-    /* Başlangıç durumu */
     25% {
-        transform: translateX(-10px) rotate(-5deg);
+        transform: translateX(-10px);
     }
-
-    /* Sola hareket eder ve biraz döner */
     50% {
-        transform: translateX(10px) rotate(5deg);
+        transform: translateX(10px);
     }
-
-    /* Sağa hareket eder ve döner */
     75% {
-        transform: translateX(-5px) rotate(-2deg);
+        transform: translateX(-10px);
     }
-
-    /* Sola hareket eder ve biraz döner */
     100% {
-        transform: translateX(5px) rotate(2deg);
+        transform: translateX(0);
     }
-
-    /* Sağa hareket eder ve döner */
 }
 
+/* Yatay hareket animasyonu */
 @keyframes move {
     0% {
         transform: translateX(0);
     }
-
-    /* Başlangıç durumu */
     50% {
-        transform: translateX(100px);
+        transform: translateX(20px);
     }
-
-    /* Sağ tarafa 100px hareket eder */
     100% {
         transform: translateX(0);
     }
-
-    /* Başlangıç noktasına geri döner */
 }
 
-/* Sallanma ve sağa sola hareket animasyonu ekle */
+/* Animasyon sınıfı */
 .move-left-right {
-    animation: move 1s ease-in-out infinite, shake 4.5s ease-in-out infinite;
-    /* Sonsuz döngüde çalışacak şekilde güncellendi */
-}
-
-/* Button için özel stil */
-#move-button {
-    position: absolute;
-    /* Sayfa üzerinde konumu kesin olarak ayarlar */
-    top: 10px;
-    /* Üstten 10px uzaklık bırakır */
-    left: 10px;
-    /* Soldan 10px uzaklık bırakır */
-    background-color: #007bff;
-    /* Mavi renkli arka plan */
-    color: white;
-    /* Beyaz yazı rengi */
-    border: none;
-    /* Kenarlık yok */
-    padding: 5px 10px;
-    /* İçeriğe 5px üst-alt, 10px sağ-sol boşluk ekler */
-    cursor: pointer;
-    /* Butona tıklanabilir işaret ekler */
-    border-radius: 5px;
-    /* Butonun köşelerini yuvarlatır */
-}
-
-/* Tablo düzeni */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-/* Resmin boyutlarını ayarlıyoruz */
-td img {
-    max-width: 50px;
-    height: auto;
-}
-
-.table-row {
-    background-color: #f0f0f0;
-}
-
-.name-cell {
-    font-weight: bold;
-}
-
-.img-cell img {
-    max-width: 100px;
-    height: auto;
-}
-/* Silme butonu stili */
-.delete-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border-radius: 50%;
-    padding: 5px;
-    cursor: pointer;
-    display: none; /* Başlangıçta görünmez */
-    z-index: -1; /* Animasyon başlamadan önce alt tarafta olacak */
-}
-
-.delete-btn i {
-    font-size: 20px;
-}
-
-/* Content div'leri için z-index animasyonu */
-.content.animating {
-    z-index: 10; /* Animasyon başladığında üstte olacak */
-}
-
-/* Animation başladıktan sonra delete-btn görünür hale gelir */
-.move-left-right .delete-btn {
-    display: block;
-}
-
-/* Content içindeki delete button'ı da animasyon ile sağa sola kayacak şekilde hareket ettir */
-.move-left-right .delete-btn {
-    animation: shake 1s ease-in-out infinite;
+    animation: shake 0.6s ease-in-out, move 1s ease-in-out;
+    /* Her iki animasyonu sırayla uygular */
 }
